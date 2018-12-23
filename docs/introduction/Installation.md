@@ -1,29 +1,22 @@
----
-id: installation
-title: Installation
-sidebar_label: Installation
-hide_title: true
----
-
 # Installation
 
-To install the stable version:
+Para instalar a versão estável:
 
 ```bash
 npm install --save redux
 ```
 
-This assumes you are using [npm](https://www.npmjs.com/) as your package manager.
+Este exemplo assume que você está usando o [npm](https://www.npmjs.com/) como o seu gerenciador de pacotes.
 
-If you're not, you can [access these files on unpkg](https://unpkg.com/redux/), download them, or point your package manager to them.
+Caso contrário, você pode [acessar estes arquivos no unpkg](https://unpkg.com/redux/), baixá-los, ou configurar o seu gerenciador de pacotes para apontar para eles.
 
-Most commonly, people consume Redux as a collection of [CommonJS](http://webpack.github.io/docs/commonjs.html) modules. These modules are what you get when you import `redux` in a [Webpack](https://webpack.js.org/), [Browserify](http://browserify.org/), or a Node environment. If you like to live on the edge and use [Rollup](https://rollupjs.org), we support that as well.
+Geralmente, as pessoas utilizam o Redux como uma coleção de módulos [CommonJS](http://webpack.github.io/docs/commonjs.html). Estes módulos são os que você recebe quando você importa o `redux` em um [Webpack](https://webpack.js.org/), [Browserify](http://browserify.org/), ou em um ambiente Node. Caso você goste de viver no limite e usa [Rollup](https://rollupjs.org), nós suportamos ele também.
 
-If you don't use a module bundler, it's also fine. The `redux` npm package includes precompiled production and development [UMD](https://github.com/umdjs/umd) builds in the [`dist` folder](https://unpkg.com/redux/dist/). They can be used directly without a bundler and are thus compatible with many popular JavaScript module loaders and environments. For example, you can drop a UMD build as a [`<script>` tag](https://unpkg.com/redux/dist/redux.js) on the page, or [tell Bower to install it](https://github.com/reduxjs/redux/pull/1181#issuecomment-167361975). The UMD builds make Redux available as a `window.Redux` global variable.
+Se você não usa um 'module bundler', também não há problema. O pacote npm do `redux` inclui builds [UMD](https://github.com/umdjs/umd) pré-compiladas para produção e desenvolvimento localizadas na [pasta `dist`](https://unpkg.com/redux/dist/). Elas podem ser utilizadas diretamente sem um bundler e por conta disso são compatíveis com muitos ambientes e 'module loaders' do JavaScript. Por exemplo, você pode utilizar uma build UMD com uma [tag `<script>`](https://unpkg.com/redux/dist/redux.js) na página, ou [instalar com o Bower](https://github.com/reduxjs/redux/pull/1181#issuecomment-167361975). As builds UMD permitem que o Redux fique disponível como uma variável global `window.Redux`.
 
-The Redux source code is written in ES2015 but we precompile both CommonJS and UMD builds to ES5 so they work in [any modern browser](http://caniuse.com/#feat=es5). You don't need to use Babel or a module bundler to [get started with Redux](https://redux.js.org/introduction/examples#counter-vanilla).
+O código fonte do Redux é escrito em ES2015 mas nós pré-compilamos com o CommonJS e builds UMD para o ES5, então ele funciona em [qualquer navegador moderno](http://caniuse.com/#feat=es5). Você não precisa usar o Babel ou qualquer 'module bundle' para [começar a usar o Redux](https://redux.js.org/introduction/examples#counter-vanilla).
 
-## Complementary Packages
+## Pacotes Complementares
 
 Most likely, you'll also need [the React bindings](https://github.com/reduxjs/react-redux) and [the developer tools](https://github.com/reduxjs/redux-devtools).
 
