@@ -1,14 +1,14 @@
 # <a href='http://redux.js.org'><img src='https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67' height='60' alt='Redux Logo' aria-label='redux.js.org' /></a>
 
-Redux is a predictable state container for JavaScript apps.  
-(Not to be confused with a WordPress framework – [Redux Framework](https://reduxframework.com/).)
+O Redux é um contêiner de estado previsível para aplicativos JavaScript.
+(Não confundir com um framework WordPress - [Redux Framework](https://reduxframework.com/).)
 
-It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as [live code editing combined with a time traveling debugger](https://github.com/reduxjs/redux-devtools).
+Ele ajuda você a escrever aplicativos que se comportam de maneira consistente, executados em diferentes ambientes (cliente, servidor e nativo) e são fáceis de testar. Além disso, oferece uma ótima experiência de desenvolvedor, como [edição de código ao vivo combinada com um depurador de viagem no tempo](https://github.com/reduxjs/redux-devtools).
 
-You can use Redux together with [React](https://reactjs.org), or with any other view library.  
-It is tiny (2kB, including dependencies).
+Você pode usar o Redux junto com o [React](https://reactjs.org), ou com qualquer outra biblioteca de view.
+É minúsculo (2kB, incluindo dependências).
 
-> **Note**: We are currently planning a rewrite of the Redux docs. Please take some time to **[fill out this survey on what content is most important in a docs site](https://docs.google.com/forms/d/e/1FAIpQLSfzIkY3fXZ8PrQKScYMK0YoEgALfAK2qQ0mOj1_ibKv2qDTuQ/viewform)**. Thanks!
+> ** Nota **: No momento, estamos planejando uma reescrita da documentação do Redux. Reserve um tempo para ** [preencher esta pesquisa sobre qual conteúdo é mais importante em um site de documentação](https://docs.google.com/forms/d/e/1FAIpQLSfzIkY3fXZ8PrQKScYMK0YoEgALfAK2qQ0mOj1_ibKv2qDTuQ/viewform) **. Obrigado!
 
 [![build status](https://img.shields.io/travis/reduxjs/redux/master.svg?style=flat-square)](https://travis-ci.org/reduxjs/redux)
 
@@ -20,34 +20,34 @@ It is tiny (2kB, including dependencies).
 
 [![Changelog #187](https://img.shields.io/badge/changelog-%23187-lightgrey.svg?style=flat-square)](https://changelog.com/187)
 
-## Learn Redux
+## Aprenda Redux
 
-We have a variety of resources available to help you learn Redux, no matter what your background or learning style is.
+emos uma variedade de recursos disponíveis para ajudá-lo a aprender Redux, não importa qual seja o seu background ou estilo de aprendizado.
 
-### Just the Basics
+### Apenas o básico
 
-If you're brand new to Redux and want to understand the basic concepts, see:
+Se você é novato no Redux e quer entender os conceitos básicos, veja:
 
-- The **[Motivation](https://redux.js.org/introduction/motivation)** behind building Redux, the **[Core Concepts](https://redux.js.org/introduction/coreconcepts)**, and the **[Three Principles](https://redux.js.org/introduction/threeprinciples)**.
-- The **[basic tutorial in the Redux docs](https://redux.js.org/basics)**
-- Redux creator Dan Abramov's **free ["Getting Started with Redux" video series](https://egghead.io/series/getting-started-with-redux)** on Egghead.io
-- Redux co-maintainer Mark Erikson's **["Redux Fundamentals" slideshow](http://blog.isquaredsoftware.com/2018/03/presentation-reactathon-redux-fundamentals/)** and **[list of suggested resources for learning Redux](http://blog.isquaredsoftware.com/2017/12/blogged-answers-learn-redux/)**
-- If you learn best by looking at code and playing with it, check out our list of **[Redux example applications](https://redux.js.org/introduction/examples)**, available as separate projects in the Redux repo, and also as interactive online examples on CodeSandbox.
-- The **[Redux Tutorials](https://github.com/markerikson/react-redux-links/blob/master/redux-tutorials.md)** section of the **[React/Redux links list](https://github.com/markerikson/react-redux-links)**. Here's a top list of our recommended tutorials:
-  - Dave Ceddia's posts [What Does Redux Do? (and when should you use it?)](https://daveceddia.com/what-does-redux-do/) and [How Redux Works: A Counter-Example](https://daveceddia.com/how-does-redux-work/) are a great intro to the basics of Redux and how to use it with React, as is this post on [React and Redux: An Introduction](http://jakesidsmith.com/blog/post/2017-11-18-redux-and-react-an-introduction/).
-  - Valentino Gagliardi's post [React Redux Tutorial for Beginners: Learning Redux in 2018](https://www.valentinog.com/blog/react-redux-tutorial-beginners/) is an excellent extended introduction to many aspects of using Redux.
-  - The CSS Tricks article [Leveling Up with React: Redux](https://css-tricks.com/learning-react-redux/) covers the Redux basics well.
-  - This [DevGuides: Introduction to Redux](http://devguides.io/redux/) tutorial covers several aspects of Redux, including actions, reducers, usage with React, and middleware.
+- A **[Motivação](./Motivation.md)** por trás da construção do Redux, os **[Conceitos Principais](./CoreConcepts.md)**, e os **[Três Princípios](./ThreePrinciples.md)**.
+- O **[tutorial básico na documentação do Redux](../basics/README.md)**
+- **[Série de vídeos "Getting Started with Redux"](https://egghead.io/series/getting-started-with-redux)** grátis no Egghead.io do criador do Redux, Dan Abramov
+- **[O slideshow "Redux Fundamentals"](http://blog.isquaredsoftware.com/2018/03/presentation-reactathon-redux-fundamentals/)** e a **[lista de recursos sugeridos para aprender Redux](http://blog.isquaredsoftware.com/2017/12/blogged-answers-learn-redux/)** do co-mantenedor do Redux, Mark Erikson
+- Se você aprende melhor olhando o código e "brincando" com ele, cheque nossa lista de **[exemplos de aplicações Redux](./Examples.md)**, disponíveis como projetos separados no repositório do Redux, e também como exemplos online interativos no CodeSandbox.
+- A seção **[Tutoriais do Redux](https://github.com/markerikson/react-redux-links/blob/master/redux-tutorials.md)** da **[lista de links React/Redux](https://github.com/markerikson/react-redux-links)**. Aqui está uma lista dos nossos tutoriais recomendados:
+  - Os posts de Dave Ceddia: [What Does Redux Do? (and when should you use it?)](https://daveceddia.com/what-does-redux-do/) e [How Redux Works: A Counter-Example](https://daveceddia.com/how-does-redux-work/) são uma grande introdução para o básico de Redux e como usar ele com React, como este post [React and Redux: An Introduction](http://jakesidsmith.com/blog/post/2017-11-18-redux-and-react-an-introduction/).
+  - O post de Valentino Gagliardi: [React Redux Tutorial for Beginners: Learning Redux in 2018](https://www.valentinog.com/blog/react-redux-tutorial-beginners/) é uma excelente introdução mais extensa sobre muitos aspectos de uso do Redux.
+  - O artigo do CSS Tricks [Leveling Up with React: Redux](https://css-tricks.com/learning-react-redux/) abrange bem o básico de Redux.
+  - O tutorial [DevGuides: Introduction to Redux](http://devguides.io/redux/) aborda vários aspectos do Redux, incluindo actions, reducers, uso com o React e middleware.
 
-### Intermediate Concepts
+### Conceitos intermediários
 
-Once you've picked up the basics of working with actions, reducers, and the store, you may have questions about topics like working with asynchronous logic and AJAX requests, connecting a UI framework like React to your Redux store, and setting up an application to use Redux:
+Depois de ter aprendido as noções básicas de como trabalhar com actions, reducers e store, você pode ter perguntas sobre tópicos tais como trabalhar com lógica assíncrona e solicitações AJAX, conectar uma estrutura de interface do usuário como React ao seu armazenamento Redux e configurar um aplicativo para usar o Redux:
 
-- The **["Advanced" docs section](https://redux.js.org/advanced)** covers working with async logic, middleware, routing.
-- The Redux docs **["Learning Resources"](https://redux.js.org/introduction/learning-resources)** page points to recommended articles on a variety of Redux-related topics.
-- Sophie DeBenedetto's 8-part **[Building a Simple CRUD App with React + Redux](http://www.thegreatcodeadventure.com/building-a-simple-crud-app-with-react-redux-part-1/)** series shows how to put together a basic CRUD app from scratch.
+- A **["seção da documentação de conceitos Avançados](../advanced/README.md)** abrange detalhes sobre como trabalhar com lógica assíncrona, middleware e rotas.
+- A página de documentação do Redux **["Recursos de Aprendizagem"](./LearningResources.md)** aponta para artigos recomendados sobre uma variedade de tópicos relacionados ao Redux.
+- A série em 8 partes de Sophie DeBenedetto **Criando um aplicativo CRUD simples com React + Redux](http://www.thegreatcodeadventure.com/building-a-simple-crud-app-with-react-redux-part-1/)** mostra como montar um aplicativo CRUD básico a partir do zero.
 
-### Real-World Usage
+### Uso no Mundo Real
 
 Going from a TodoMVC app to a real production application can be a big jump, but we've got plenty of resources to help:
 
@@ -60,21 +60,23 @@ Going from a TodoMVC app to a real production application can be a big jump, but
 
 Finally, Mark Erikson is teaching a series of **[Redux workshops through Workshop.me](#redux-workshops)**. Check the [workshop schedule](https://workshop.me/?a=mark) for upcoming dates and locations.
 
-### Help and Discussion
+## Ajuda e Discussão
 
-The **[#redux channel](https://discord.gg/0ZcbPKXt5bZ6au5t)** of the **[Reactiflux Discord community](http://www.reactiflux.com)** is our official resource for all questions related to learning and using Redux. Reactiflux is a great place to hang out, ask questions, and learn - come join us!
+O **[canal #redux](https://discord.gg/0ZcbPKXt5bZ6au5t)** da **[comunidade Reactiflux no Discord](http://www.reactiflux.com)** é nosso recurso oficial para todas as questões relacionadas com aprender e usar o Redux. Reactiflux é um ótimo lugar para sair, fazer perguntas e aprender - venha se juntar a nós!
 
-## Before Proceeding Further
+You can also ask questions on [Stack Overflow](https://stackoverflow.com) using the **[#redux tag](https://stackoverflow.com/questions/tagged/redux)**.
 
-Redux is a valuable tool for organizing your state, but you should also consider whether it's appropriate for your situation. Don't use Redux just because someone said you should - take some time to understand the potential benefits and tradeoffs of using it.
+## Antes de prosseguir
 
-Here are some suggestions on when it makes sense to use Redux:
+O Redux é uma ferramenta valiosa para organizar seu estado, mas você também deve considerar se é apropriado para sua situação. ** Não use o Redux só porque alguém disse que você deveria - tire um tempo para entender os potenciais benefícios e desvantagens de usá-lo **.
 
-- You have reasonable amounts of data changing over time
-- You need a single source of truth for your state
-- You find that keeping all your state in a top-level component is no longer sufficient
+Aqui estão algumas sugestões sobre quando faz sentido usar o Redux:
 
-Yes, these guidelines are subjective and vague, but this is for good reason. The point at which you should integrate Redux into your application is different for every user and different for every application.
+- Você tem quantidades razoáveis ​​de dados mudando ao longo do tempo
+- Você precisa de uma única fonte de verdade para o seu estado
+- Você acha que manter todo o seu estado em um componente de nível superior não é mais suficiente
+
+Sim, essas diretrizes são subjetivas e vagas, mas isso é por um bom motivo. O momento em que você deve integrar o Redux em seu aplicativo é diferente para cada usuário e diferente para cada aplicativo.
 
 > **For more thoughts on how Redux is meant to be used, see:**<br>
 >
@@ -83,66 +85,65 @@ Yes, these guidelines are subjective and vague, but this is for good reason. The
 > - **[The Tao of Redux, Part 2 - Practice and Philosophy](http://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-2/)**
 > - **[Redux FAQ](https://redux.js.org/faq)**
 
-## Developer Experience
+## Experiência do desenvolvedor
 
-Dan Abramov (author of Redux) wrote Redux while working on his React Europe talk called [“Hot Reloading with Time Travel”](https://www.youtube.com/watch?v=xsSnOQynTHs). His goal was to create a state management library with a minimal API but completely predictable behavior. Redux makes it possible to implement logging, hot reloading, time travel, universal apps, record and replay, without any buy-in from the developer.
+Dan Abramov (autor do Redux) escreveu Redux enquanto trabalhava em sua palestra na React Europe chamada ["Hot Reloading with Time Travel"](https://www.youtube.com/watch?v=xsSnOQynTHs). Seu objetivo era criar uma biblioteca de gerenciamento de estado com uma API mínima, mas um comportamento completamente previsível. O Redux possibilita a implementação de logging, hot reloading, time travel, aplicativos universais, gravação e reprodução, sem qualquer participação do desenvolvedor.
 
-## Influences
+## Influências
 
-Redux evolves the ideas of [Flux](http://facebook.github.io/flux/), but avoids its complexity by taking cues from [Elm](https://github.com/evancz/elm-architecture-tutorial/).  
-Even if you haven't used Flux or Elm, Redux only takes a few minutes to get started with.
+O Redux desenvolve as idéias do [Flux](http://facebook.github.io/flux/), mas evita sua complexidade pegando sugestões do [Elm] (https://github.com/evancz/elm-architecture-tutorial /).
+Mesmo se você nunca usou Flux ou Elm, o Redux leva apenas alguns minutos para começar.
 
-## Installation
+## Instalação
 
-To install the stable version:
+Para instalar a versão estável:
 
-```sh
-npm install --save redux
-```
+`` `sh npm install --save redux `` `
 
-This assumes you are using [npm](https://www.npmjs.com/) as your package manager.
+Isso pressupõe que você está usando [npm](https://www.npmjs.com/) como seu gerenciador de pacotes.
 
-If you're not, you can [access these files on unpkg](https://unpkg.com/redux/), download them, or point your package manager to them.
+Se não estiver, você pode [acessar esses arquivos no unpkg](https://unpkg.com/redux/), baixá-los ou apontar seu gerenciador de pacotes para eles.
 
-Most commonly, people consume Redux as a collection of [CommonJS](https://github.com/webpack/docs/wiki/commonjs) modules. These modules are what you get when you import `redux` in a [Webpack](https://webpack.js.org/), [Browserify](http://browserify.org/), or a Node environment. If you like to live on the edge and use [Rollup](https://rollupjs.org), we support that as well.
+Geralmente, as pessoas consomem o Redux como uma coleção de módulos [CommonJS](https://github.com/webpack/docs/wiki/commonjs). Estes módulos são o que você obtém quando importa o `redux` em um [Webpack](https://webpack.js.org/), [Browserify](http://browserify.org/) ou um ambiente Node. Se você gosta de viver no limite e usar o [Rollup](https://rollupjs.org), também damos suporte a isso.
 
-If you don't use a module bundler, it's also fine. The `redux` npm package includes precompiled production and development [UMD](https://github.com/umdjs/umd) builds in the [`dist` folder](https://unpkg.com/redux/dist/). They can be used directly without a bundler and are thus compatible with many popular JavaScript module loaders and environments. For example, you can drop a UMD build as a [`<script>` tag](https://unpkg.com/redux/dist/redux.js) on the page, or [tell Bower to install it](https://github.com/reduxjs/redux/pull/1181#issuecomment-167361975). The UMD builds make Redux available as a `window.Redux` global variable.
+Se você não usa um module bundler, também está tranquilo. O pacote npm do `redux` inclui builds de produção e desenvolvimento pré-compilados [UMD](https://github.com/umdjs/umd) na pasta [`dist`](https://unpkg.com/redux/dist/) . Eles podem ser usados ​​diretamente sem um bundler e, portanto, são compatíveis com muitos module loaders e ambientes JavaScript populares. Por exemplo, você pode usar uma build UMD como uma tag [`<script>`](https://unpkg.com/redux/dist/redux.js) na página, ou [pedir ao Bower para instalá-la] (https : //github.com/reduxjs/redux/pull/1181#issuecomment-167361975). As builds do UMD tornam o Redux disponível como uma variável global `window.Redux`.
 
-The Redux source code is written in ES2015 but we precompile both CommonJS and UMD builds to ES5 so they work in [any modern browser](http://caniuse.com/#feat=es5). You don't need to use Babel or a module bundler to [get started with Redux](https://github.com/reduxjs/redux/blob/master/examples/counter-vanilla/index.html).
+O código-fonte do Redux é escrito no ES2015, mas nós pré-compilamos o CommonJS e o UMD para o ES5 para que funcionem em [qualquer navegador moderno](http://caniuse.com/#feat=es5). Você não precisa usar o Babel ou um module bundler para [começar com o Redux](https://github.com/reduxjs/redux/blob/master/examples/counter-vanilla/index.html).
 
-### Complementary Packages
+### Pacotes Complementares
 
-Most likely, you'll also need [the React bindings](https://github.com/reduxjs/react-redux) and [the developer tools](https://github.com/reduxjs/redux-devtools).
+Provavelmente, você também precisará dos [bindings do React](https://github.com/reduxjs/react-redux) e [as ferramentas do desenvolvedor](https://github.com/reduxjs/redux-devtools).
 
 ```sh
 npm install --save react-redux
 npm install --save-dev redux-devtools
 ```
 
-Note that unlike Redux itself, many packages in the Redux ecosystem don't provide UMD builds, so we recommend using CommonJS module bundlers like [Webpack](https://webpack.js.org/) and [Browserify](http://browserify.org/) for the most comfortable development experience.
+Note que, diferentemente do próprio Redux, muitos pacotes no ecossistema Redux não fornecem builds UMD, então recomendamos o uso de module bundlers do CommonJS tipo [Webpack](https://webpack.js.org/) e [Browserify] (http: / /browserify.org/) para a experiência de desenvolvimento mais confortável.
 
-## The Gist
+## A Essência
 
-The whole state of your app is stored in an object tree inside a single _store_.  
-The only way to change the state tree is to emit an _action_, an object describing what happened.  
-To specify how the actions transform the state tree, you write pure _reducers_.
+Todo o estado do seu aplicativo é armazenado em uma árvore de objetos dentro de uma única _store_.
 
-That's it!
+A única maneira de alterar a árvore de estados é emitir um _action_, um objeto descrevendo o que aconteceu.
+
+Para especificar como as ações transformam a árvore de estados, você escreve _reducers_.
+
+E é isso!
 
 ```js
 import { createStore } from "redux";
 
 /**
- * This is a reducer, a pure function with (state, action) => state signature.
- * It describes how an action transforms the state into the next state.
+ * Este é um reducer, uma função pura com a assinatura (state, action) => state.
+ * Ela descreve como uma ação transforma o estado atual em um novo estado.
  *
- * The shape of the state is up to you: it can be a primitive, an array, an object,
- * or even an Immutable.js data structure. The only important part is that you should
- * not mutate the state object, but return a new object if the state changes.
+ * A forma do estado depende de você: ele pode ser um valor primitivo, um array, um objeto ou mesmo uma estrutura de dados do Immutable.js. A única parte importante é que você nunca deve
+ * mutar o objeto do estado, mas sim, retornar um novo objeto se o estado mudar.
  *
- * In this example, we use a `switch` statement and strings, but you can use a helper that
- * follows a different convention (such as function maps) if it makes sense for your
- * project.
+ * Neste exemplo, nós usaremos o  `switch` e strings, mas você pode usar um helper que
+ * segue uma convenção diferente (por exemplo, funções de mapeamento) se fizer sentido para o seu projeto
+ *
  */
 function counter(state = 0, action) {
   switch (action.type) {
@@ -155,18 +156,18 @@ function counter(state = 0, action) {
   }
 }
 
-// Create a Redux store holding the state of your app.
-// Its API is { subscribe, dispatch, getState }.
+// Crie uma store do Redux que manterá o estado do seu App.
+// A API dela é { subscribe, dispatch, getState }.
 let store = createStore(counter);
 
-// You can use subscribe() to update the UI in response to state changes.
-// Normally you'd use a view binding library (e.g. React Redux) rather than subscribe() directly.
-// However it can also be handy to persist the current state in the localStorage.
+// Você pode usar o subscribe() para atualizar a UI em resposta à mudanças no estado.
+// Normalmente, você usaria uma biblioteca de binding na view (e.g. React Redux) ao invés de usar o subscribe() diretamente.
+// Entretanto, isto pode ser útil para persistir o estado atual no localStorage.
 
 store.subscribe(() => console.log(store.getState()));
 
-// The only way to mutate the internal state is to dispatch an action.
-// The actions can be serialized, logged or stored and later replayed.
+// A única forma de mutar o estado interno é através do dispatch de uma ação.
+// As ações podem ser serializadas, colocadas em log ou armazenadas e posteriormente reexecutadas.
 store.dispatch({ type: "INCREMENT" });
 // 1
 store.dispatch({ type: "INCREMENT" });
@@ -175,19 +176,19 @@ store.dispatch({ type: "DECREMENT" });
 // 1
 ```
 
-Instead of mutating the state directly, you specify the mutations you want to happen with plain objects called _actions_. Then you write a special function called a _reducer_ to decide how every action transforms the entire application's state.
+Ao invés de mutar o estado diretamente, você especifica as mutações que você quer que ocorra com objetos planos chamados _actions_. Então você escreve uma função especial chamadaThen _reducer_ para decidir como cada action transforma o estado inteiro da aplicação.
 
-If you're coming from Flux, there is a single important difference you need to understand. Redux doesn't have a Dispatcher or support many stores. Instead, there is just a single store with a single root reducing function. As your app grows, instead of adding stores, you split the root reducer into smaller reducers independently operating on the different parts of the state tree. This is exactly like how there is just one root component in a React app, but it is composed out of many small components.
+Em um app típico usando Redux, há somente uma única store com uma única função redutora. Porém, à medida que seu app cresce, você irá dividir o seu reducer raíz em reducers menores que irão operar independentemente e em diferentes partes da árvore de estado. Isto é exatamente da mesma forma em que há apenas um componente raiz em um aplicativo React, mas ele é composto de muitos componentes pequenos.
 
-This architecture might seem like an overkill for a counter app, but the beauty of this pattern is how well it scales to large and complex apps. It also enables very powerful developer tools, because it is possible to trace every mutation to the action that caused it. You can record user sessions and reproduce them just by replaying every action.
+Essa arquitetura pode parecer um exagero para um aplicativo criado somente com um contador, mas a beleza desse padrão é como ele é escalável para aplicativos grandes e complexos. Ele também permite ferramentas de desenvolvedor muito poderosas, porque é possível rastrear cada mutação para a ação que ocasionou ela. Você pode gravar sessões do usuário e reproduzi-las apenas reproduzindo cada ação.
 
-## Learn Redux from Its Authors
+## Aprenda Redux por seus Autores
 
-### Redux Video Tutorials by Dan Abramov
+### Tutoriais em Vídeo de Redux por Dan Abramov
 
 #### Getting Started with Redux
 
-**[Getting Started with Redux](https://egghead.io/series/getting-started-with-redux)** is a video course consisting of 30 videos narrated by [Dan Abramov](https://twitter.com/dan_abramov), author of Redux. It is designed to complement the “Basics” part of the docs while bringing additional insights about immutability, testing, Redux best practices, and using Redux with React. **This course is free and will always be.**
+**[Getting Started with Redux](https://egghead.io/series/getting-started-with-redux)** é um curso em vídeo composto por 30 vídeos narrados por [Dan Abramov](https://twitter.com/dan_abramov), autor de Redux. Ele foi desenvolvido para complementar a parte “Básica” da documentação, trazendo insights adicionais sobre imutabilidade, testes, melhores práticas do Redux e usando o Redux com o React. **Este curso é e sempre será gratuito.**
 
 > [“Great course on egghead.io by @dan_abramov - instead of just showing you how to use #redux, it also shows how and why redux was built!”](https://twitter.com/sandrinodm/status/670548531422326785)  
 > Sandrino Di Mattia
@@ -204,63 +205,62 @@ This architecture might seem like an overkill for a counter app, but the beauty 
 > [“This series of videos on Redux by @dan_abramov is repeatedly blowing my mind - gunna do some serious refactoring”](https://twitter.com/gelatindesign/status/669658358643892224)  
 > Laurence Roberts
 
-So, what are you waiting for?
+Então, o que você está esperando?
 
-#### [Watch the free "Getting Started with Redux" video series](https://egghead.io/series/getting-started-with-redux)
+#### [Assista à série de vídeos gratuita "Getting Started with Redux"](https://egghead.io/series/getting-started-with-redux)
 
-> Note: If you enjoyed Dan's course, consider supporting Egghead by [buying a subscription](https://egghead.io/pricing). Subscribers have access to the source code of every example in my videos and tons of advanced lessons on other topics, including JavaScript in depth, React, Angular, and more. Many [Egghead instructors](https://egghead.io/instructors) are also open source library authors, so buying a subscription is a nice way to thank them for the work that they've done.
+> Nota: Se você gostou do curso de Dan, considere apoiar o Egghead [fazendo uma assinatura](https://egghead.io/pricing). Os inscritos têm acesso ao código-fonte de todos os exemplos em meus vídeos e muitas lições avançadas sobre outros tópicos, incluindo JavaScript em profundidade, Reaçt, Angular e muito mais. Muitos [instrutores de Egghead](https://egghead.io/instructors) também são autores de bibliotecas de código aberto, portanto, fazer uma assinatura é uma boa maneira de agradecer-lhes pelo trabalho que fizeram.
 
 #### Building React Applications with Idiomatic Redux
 
-The **[Building React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)** course is a second free video series by Dan Abramov. It picks up where the first series left off, and covers practical production ready techniques for building your React and Redux applications: advanced state management, middleware, React Router integration, and other common problems you are likely to encounter while building applications for your clients and customers. As with the first series, **this course will always be free**.
+O curso **[Building React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)**
+é uma segunda série de vídeos gratuitos de Dan Abramov. Ele começa de onde a primeira série parou e abrange técnicas prontas para serem usadas em produção para a construção de suas aplicações React e Redux: gerenciamento avançado de estado, middleware, integração com o React Router e outros problemas comuns que você provavelmente encontrará ao criar aplicativos para seus clientes. Como na primeira série, ** este curso será sempre gratuito **.
 
-#### [Watch the free "Idiomatic Redux" video series](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
+#### [Assista a série de vídeos grátis "Idiomatic Redux"](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
 
 ### Practical Redux course
 
-**[Practical Redux](https://www.educative.io/collection/5687753853370368/5707702298738688/)** is a paid interactive course by Redux co-maintainer [Mark Erikson](https://twitter.com/acemarke). The course is designed to show how to apply the basic concepts of Redux to building something larger than a TodoMVC application. It includes real-world topics like:
+**[Redux na Prática](https://www.educative.io/collection/5687753853370368/5707702298738688/) ** é um curso interativo pago pelo co-mantenedor do Redux [Mark Erikson](https://twitter.com/acemarke). O curso foi desenvolvido para mostrar como aplicar os conceitos básicos do Redux para construir algo maior que um aplicativo TodoMVC. Inclui tópicos do mundo real como:
 
-- Adding Redux to a new Create-React-App project and configuring Hot Module Replacement for faster development
-- Controlling your UI behavior with Redux
-- Using the Redux-ORM library to manage relational data in your Redux store
-- Building a master/detail view to display and edit data
-- Writing custom advanced Redux reducer logic to solve specific problems
-- Optimizing performance of Redux-connected form inputs
+- Adicionando o Redux a um novo projeto Create-React-App e configurando o Hot Module Replacement para um desenvolvimento mais rápido
+- Controlando o comportamento da interface do usuário com o Redux
+- Usando a biblioteca Redux-ORM para gerenciar dados relacionais em sua store
+- Construindo uma view principal/de detalhe para exibir e editar dados
+- Escrevendo lógica avançada do reducer para resolver problemas específicos
+- Otimizando o desempenho de entradas de formulário conectadas ao Redux
 
-And much more!
-
-The course is based on Mark's original free **["Practical Redux" blog tutorial series](http://blog.isquaredsoftware.com/series/practical-redux/)**, but with updated and improved content.
+E muito mais!
 
 ### Redux Fundamentals Workshop
 
-Redux co-maintainer [Mark Erikson](https://twitter.com/acemarke) has put together a [**Redux Fundamentals workshop**, and slides are available here](https://blog.isquaredsoftware.com/2018/06/redux-fundamentals-workshop-slides/). They cover:
+O co-mantenedor do Redux [Mark Erikson](https://twitter.com/acemarke) montou um [**Redux Fundamentals workshop**, e os slides estão disponíveis aqui](https://blog.isquaredsoftware.com/2018/06/redux-fundamentos-oficina-slides/). Eles cobrem:
 
-- The history and purpose of Redux
-- Reducers and actions, and working with a Redux store
-- Using Redux with React
-- Using and writing Redux middleware
-- Working with AJAX calls and other side effects
-- Unit testing Redux apps
-- Real-world Redux app structure and development
+- A história e propósito do Redux
+- Reducers e actions, e trabalhando com uma store do Redux
+- Usando Redux com React
+- Usando e escrevendo o middleware Redux
+- Trabalhando com chamadas AJAX e outros efeitos colaterais
+- Teste de unidade de aplicativos Redux
+- Estrutura e desenvolvimento de aplicativos do Redux no mundo real
 
-## Documentation
+## Documentação
 
-- [Introduction](http://redux.js.org/introduction/index.html)
-- [Basics](http://redux.js.org/basics/index.html)
-- [Advanced](http://redux.js.org/advanced/index.html)
+- [Introdução](http://redux.js.org/introduction/index.html)
+- [Básico](http://redux.js.org/basics/index.html)
+- [Avançado](http://redux.js.org/advanced/index.html)
 - [Recipes](http://redux.js.org/recipes/index.html)
 - [FAQ](http://redux.js.org/FAQ.html)
-- [Troubleshooting](http://redux.js.org/Troubleshooting.html)
-- [Glossary](http://redux.js.org/Glossary.html)
-- [API Reference](http://redux.js.org/api/index.html)
+- [Solução de problemas](http://redux.js.org/Troubleshooting.html)
+- [Glossário](http://redux.js.org/Glossary.html)
+- [Referências da API](http://redux.js.org/api/index.html)
 
-For PDF, ePub, and MOBI exports for offline reading, and instructions on how to create them, please see: [paulkogel/redux-offline-docs](https://github.com/paulkogel/redux-offline-docs).
+Para exportações em PDF, ePub e MOBI para leitura off-line e instruções sobre como criá-las, consulte: [paulkogel / redux-offline-docs](https://github.com/paulkogel/redux-offline-docs).
 
-For Offline docs, please see: [devdocs](http://devdocs.io/redux/)
+Para a documentação off-line, consulte: [devdocs][devdocs](http://devdocs.io/redux/)
 
-## Examples
+## Exemplos
 
-Almost all examples have a corresponding CodeSandbox sandbox. This is an interactive version of the code that you can play with online.
+Quase todos os exemplos têm uma sandbox do CodeSandbox. Isto é uma versão interativa do código que você pode "brincar" online.
 
 - [**Counter Vanilla**](https://redux.js.org/introduction/examples#counter-vanilla): [Source](https://github.com/reduxjs/redux/tree/master/examples/counter-vanilla)
 - [**Counter**](https://redux.js.org/introduction/examples#counter): [Source](https://github.com/reduxjs/redux/tree/master/examples/counter) | [Sandbox](https://codesandbox.io/s/github/reduxjs/redux/tree/master/examples/counter)
@@ -274,9 +274,9 @@ Almost all examples have a corresponding CodeSandbox sandbox. This is an interac
 - [**Universal**](https://redux.js.org/introduction/examples#universal): [Source](https://github.com/reduxjs/redux/tree/master/examples/universal)
 - [**Real World**](https://redux.js.org/introduction/examples#real-world): [Source](https://github.com/reduxjs/redux/tree/master/examples/real-world) | [Sandbox](https://codesandbox.io/s/github/reduxjs/redux/tree/master/examples/real-world)
 
-If you're new to the NPM ecosystem and have troubles getting a project up and running, or aren't sure where to paste the gist above, check out [simplest-redux-example](https://github.com/jackielii/simplest-redux-example) that uses Redux together with React and Browserify.
+Se você é novo no ecossistema NPM e tem problemas para fazer um projeto funcionar, ou não sabe onde colá-lo, confira [simplest-redux-example] (https://github.com/jackielii / simplest-redux-example) que usa o Redux junto com o React e o Browserify.
 
-## Testimonials
+## Depoimentos
 
 > [“Love what you're doing with Redux”](https://twitter.com/jingc/status/616608251463909376)  
 > Jing Chen, creator of Flux
@@ -287,7 +287,7 @@ If you're new to the NPM ecosystem and have troubles getting a project up and ru
 > [“It's cool that you are inventing a better Flux by not doing Flux at all.”](https://twitter.com/andrestaltz/status/616271392930201604)  
 > André Staltz, creator of Cycle
 
-## Thanks
+## Obrigado
 
 - [The Elm Architecture](https://github.com/evancz/elm-architecture-tutorial) for a great intro to modeling state updates with reducers;
 - [Turning the database inside-out](https://www.confluent.io/blog/turning-the-database-inside-out-with-apache-samza/) for blowing my mind;
@@ -304,17 +304,18 @@ Special thanks to [Jamie Paton](http://jdpaton.github.io) for handing over the `
 
 ## Logo
 
-You can find the official logo [on GitHub](https://github.com/reduxjs/redux/tree/master/logo).
+Você pode encontrar o logotipo oficial [no GitHub](https://github.com/reduxjs/redux/tree/master/logo).
 
 ## Change Log
 
-This project adheres to [Semantic Versioning](http://semver.org/).  
-Every release, along with the migration instructions, is documented on the GitHub [Releases](https://github.com/reduxjs/redux/releases) page.
+Este projeto adere à [Semantic Versioning](http://semver.org/).
+
+Cada versão, juntamente com as instruções de migração, está documentada na página do GitHub [Releases](https://github.com/reduxjs/redux/releases).
 
 ## Patrons
 
-The work on Redux was [funded by the community](https://www.patreon.com/reactdx).  
-Meet some of the outstanding companies that made it possible:
+O trabalho no Redux foi [financiado pela comunidade](https://www.patreon.com/reactdx).
+Conheça algumas das empresas de destaque que tornaram isso possível:
 
 - [Webflow](https://github.com/webflow)
 - [Ximedes](https://www.ximedes.com/)
