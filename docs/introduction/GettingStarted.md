@@ -120,7 +120,7 @@ Se você é novato no Redux e quer entender os conceitos básicos, veja:
   - Os posts de Dave Ceddia: [What Does Redux Do? (and when should you use it?)](https://daveceddia.com/what-does-redux-do/) e [How Redux Works: A Counter-Example](https://daveceddia.com/how-does-redux-work/) são uma grande introdução para o básico de Redux e como usar ele com React, como este post [React and Redux: An Introduction](http://jakesidsmith.com/blog/post/2017-11-18-redux-and-react-an-introduction/).
   - O post de Valentino Gagliardi: [React Redux Tutorial for Beginners: Learning Redux in 2018](https://www.valentinog.com/blog/react-redux-tutorial-beginners/) é uma excelente introdução mais extensa sobre muitos aspectos de uso do Redux.
   - O artigo do CSS Tricks [Leveling Up with React: Redux](https://css-tricks.com/learning-react-redux/) abrange bem o básico de Redux.
-  - O tutorial [DevGuides: Introduction to Redux](http://devguides.io/redux/) tutorial covers several aspects of Redux, including actions, reducers, usage with React, and middleware.
+  - O tutorial [DevGuides: Introduction to Redux](http://devguides.io/redux/) aborda vários aspectos do Redux, incluindo actions, reducers, uso com o React e middleware.
 
 ### Conceitos intermediários
 
