@@ -1,4 +1,4 @@
-# Installation
+# Instalação
 
 Para instalar a versão estável:
 
@@ -18,11 +18,11 @@ O código fonte do Redux é escrito em ES2015 mas nós pré-compilamos com o Com
 
 ## Pacotes Complementares
 
-Most likely, you'll also need [the React bindings](https://github.com/reduxjs/react-redux) and [the developer tools](https://github.com/reduxjs/redux-devtools).
+Provavelmente, você também irá precisar dos [bindings do React](https://github.com/reduxjs/react-redux) e [as ferramentas de desenvolvedor](https://github.com/reduxjs/redux-devtools).
 
 ```bash
 npm install --save react-redux
 npm install --save-dev redux-devtools
 ```
 
-Note that unlike Redux itself, many packages in the Redux ecosystem don't provide UMD builds, so we recommend using CommonJS module bundlers like [Webpack](https://webpack.js.org/) and [Browserify](http://browserify.org/) for the most comfortable development experience.
+Note que, diferentemente do próprio Redux, diversos pacotes no ecossistema do Redux não fornecem builds UMD, então nós recomendamos utilizar module bundlers do CommonJS tais como [Webpack](https://webpack.js.org/) e [Browserify](http://browserify.org/) para que você tenha uma experiência de desenvolvimento mais confortável.

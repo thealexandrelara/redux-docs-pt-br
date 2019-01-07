@@ -1,106 +1,96 @@
----
-id: getting-started
-title: Getting Started with Redux
-sidebar_label: Getting Started with Redux
-hide_title: true
----
+# Começando com o Redux
 
-# Getting Started with Redux
+Redux é um container de estado previsível para apps em JavaScript.
 
-Redux is a predictable state container for JavaScript apps.
+Ele ajuda que você escreva aplicações que se comportem de forma consistente, que funcionem em diferentes ambientes (cliente, servidor, e nativo), e que sejam fáceis de testar. Além disso, ele fornece uma grande experiência de desenvolvedor, tais como [edição de código em tempo real combinado com um 'time traveling debugger'](https://github.com/reduxjs/redux-devtools).
 
-It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as [live code editing combined with a time traveling debugger](https://github.com/reduxjs/redux-devtools).
+Você pode usar o Redux em conjunto com o [React](https://reactjs.org), ou qualquer outra biblioteca de view. Ele é minúsculo (2kB, incluindo dependências), mas tem um grande ecossistema de addons disponíveis.
 
-You can use Redux together with [React](https://reactjs.org), or with any other view library. It is tiny (2kB, including dependencies), but has a large ecosystem of addons available.
+## Instalação
 
-## Installation
-
-Redux is available as a package on NPM for use with a module bundler or in a Node application:
+O Redux está disponível como um pacote NPM para uso com um module bundler ou em uma aplicação Node:
 
 ```bash
 npm install --save redux
 ```
 
-It is also available as a precompiled UMD package that defines a `window.Redux` global variable. The UMD package can be used as a [`<script>` tag](https://unpkg.com/redux/dist/redux.js) directly.
+Ele também está disponível como um pacote UMD pré-compilado que define uma variábel global `window.Redux`. O pacote UMD pode ser usado com uma [tag `<script>`](https://unpkg.com/redux/dist/redux.js) diretamente.
 
-For more details, see the [Installation](Installation.md) page.
+Para maiores detalhes, veja a página de [Instalação](Installation.md).
 
-## Redux Starter Kit
+## Pacote de Iniciante do Redux
 
-Redux itself is small and unopinionated. We also have a separate package called **[redux-starter-kit](https://redux-starter-kit.js.org/)**,
-which includes some opinionated defaults that help you use Redux more effectively.
+Redux é pequeno e sem uma opinião definida. Nós também possuímos um pacote separado chamado de **[redux-starter-kit](https://redux-starter-kit.js.org/)**,
+que incluem alguns padrões baseados em opinião que ajudarão você a usar o Redux de uma forma mais eficiente.
 
-It helps simplify a lot of common use cases, including [store setup](https://redux-starter-kit.js.org/api/configureStore),
-[creating reducers and writing immutable update logic](https://redux-starter-kit.js.org/api/createreducer),
-and even [creating entire "slices" of state at once](https://redux-starter-kit.js.org/api/createslice).
+Isto ajuda a simplificar vários casos de uso comuns, incluindo [configuração da store](https://redux-starter-kit.js.org/api/configureStore),
+[criação de reducers e escrita de lógica de atualização imutável](https://redux-starter-kit.js.org/api/createreducer),
+e mesmo [criação de "fatias" inteiras de estado de uma vez](https://redux-starter-kit.js.org/api/createslice).
 
-Whether you're a brand new Redux user setting up your first project, or an experienced user who wants to
-simplify an existing application, **[redux-starter-kit](https://redux-starter-kit.js.org/)** can help you
-make your Redux code better.
+Independentemente se você é um novo usuário de Redux configurando seu primeiro projeto ou alguém já experiente desejando simplificar uma aplicação existente, o **[redux-starter-kit](https://redux-starter-kit.js.org/)** pode te ajudar a melhorar seu código do Redux.
 
-## Basic Example
+## Exemplo básico
 
-The whole state of your app is stored in an object tree inside a single _store_.  
-The only way to change the state tree is to emit an _action_, an object describing what happened.  
-To specify how the actions transform the state tree, you write pure _reducers_.
+Todo o estado da sua aplicação está em uma árvore de objetos dentro de uma única _store_.  
+A única forma de alterar a árvore de estado é emitir uma _action_, um objeto descrevendo o que ocorreu.  
+Para especificar como as ações transformam a árvore de estado, você escreve os _reducers_.
 
-That's it!
+E é isso!
 
 ```js
-import { createStore } from 'redux'
+import { createStore } from "redux";
 
 /**
- * This is a reducer, a pure function with (state, action) => state signature.
- * It describes how an action transforms the state into the next state.
+ * Este é um reducer, uma função pura com a assinatura (state, action) => state.
+ * Ela descreve como uma ação transforma o estado atual em um novo estado.
  *
- * The shape of the state is up to you: it can be a primitive, an array, an object,
- * or even an Immutable.js data structure. The only important part is that you should
- * not mutate the state object, but return a new object if the state changes.
+ * A forma do estado depende de você: ele pode ser um valor primitivo, um array, um objeto ou mesmo uma estrutura de dados do Immutable.js. A única parte importante é que você nunca deve
+ * mutar o objeto do estado, mas sim, retornar um novo objeto se o estado mudar.
  *
- * In this example, we use a `switch` statement and strings, but you can use a helper that
- * follows a different convention (such as function maps) if it makes sense for your
- * project.
+ * Neste exemplo, nós usaremos o  `switch` e strings, mas você pode usar um helper que
+ * segue uma convenção diferente (por exemplo, funções de mapeamento) se fizer sentido para o seu projeto
+ *
  */
 function counter(state = 0, action) {
   switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
+    case "INCREMENT":
+      return state + 1;
+    case "DECREMENT":
+      return state - 1;
     default:
-      return state
+      return state;
   }
 }
 
-// Create a Redux store holding the state of your app.
-// Its API is { subscribe, dispatch, getState }.
-let store = createStore(counter)
+// Crie uma store do Redux que manterá o estado do seu App.
+// A API dela é { subscribe, dispatch, getState }.
+let store = createStore(counter);
 
-// You can use subscribe() to update the UI in response to state changes.
-// Normally you'd use a view binding library (e.g. React Redux) rather than subscribe() directly.
-// However it can also be handy to persist the current state in the localStorage.
+// Você pode usar o subscribe() para atualizar a UI em resposta à mudanças no estado.
+// Normalmente, você usaria uma biblioteca de binding na view (e.g. React Redux) ao invés de usar o subscribe() diretamente.
+// Entretanto, isto pode ser útil para persistir o estado atual no localStorage.
 
-store.subscribe(() => console.log(store.getState()))
+store.subscribe(() => console.log(store.getState()));
 
-// The only way to mutate the internal state is to dispatch an action.
-// The actions can be serialized, logged or stored and later replayed.
-store.dispatch({ type: 'INCREMENT' })
+// A única forma de mutar o estado interno é através do dispatch de uma ação.
+// As ações podem ser serializadas, colocadas em log ou armazenadas e posteriormente reexecutadas.
+store.dispatch({ type: "INCREMENT" });
 // 1
-store.dispatch({ type: 'INCREMENT' })
+store.dispatch({ type: "INCREMENT" });
 // 2
-store.dispatch({ type: 'DECREMENT' })
+store.dispatch({ type: "DECREMENT" });
 // 1
 ```
 
-Instead of mutating the state directly, you specify the mutations you want to happen with plain objects called _actions_. Then you write a special function called a _reducer_ to decide how every action transforms the entire application's state.
+Ao invés de mutar o estado diretamente, você especifica as mutações que você quer que ocorra com objetos planos chamados _actions_. Então você escreve uma função especial chamadaThen _reducer_ para decidir como cada action transforma o estado inteiro da aplicação.
 
-In a typical Redux app, there is just a single store with a single root reducing function. As your app grows, you split the root reducer into smaller reducers independently operating on the different parts of the state tree. This is exactly like how there is just one root component in a React app, but it is composed out of many small components.
+Em um app típico usando Redux, há somente uma única store com uma única função redutora. Porém, à medida que seu app cresce, você irá dividir o seu reducer raíz em reducers menores que irão operar independentemente e em diferentes partes da árvore de estado. Isto é exatamente da mesma forma em que há apenas um componente raiz em um aplicativo React, mas ele é composto de muitos componentes pequenos.
 
-This architecture might seem like an overkill for a counter app, but the beauty of this pattern is how well it scales to large and complex apps. It also enables very powerful developer tools, because it is possible to trace every mutation to the action that caused it. You can record user sessions and reproduce them just by replaying every action.
+Essa arquitetura pode parecer um exagero para um aplicativo criado somente com um contador, mas a beleza desse padrão é como ele é escalável para aplicativos grandes e complexos. Ele também permite ferramentas de desenvolvedor muito poderosas, porque é possível rastrear cada mutação para a ação que ocasionou ela. Você pode gravar sessões do usuário e reproduzi-las apenas reproduzindo cada ação.
 
-## Examples
+## Exemplos
 
-The Redux repository contains several example projects demonstrating various aspects of how to use Redux. Almost all examples have a corresponding CodeSandbox sandbox. This is an interactive version of the code that you can play with online.
+O repositório do Redux contém vários exemploes de projetos demonstrando vários aspectos de como usar o Redux. Quase todos os exemplos têm um sandbox do CodeSandbox. Isto é uma versão interativa do código que você pode "brincar" online.
 
 - [**Counter Vanilla**](/introduction/examples#counter-vanilla): [Source](https://github.com/reduxjs/redux/tree/master/examples/counter-vanilla)
 - [**Counter**](/introduction/examples#counter): [Source](https://github.com/reduxjs/redux/tree/master/examples/counter) | [Sandbox](https://codesandbox.io/s/github/reduxjs/redux/tree/master/examples/counter)
@@ -113,32 +103,32 @@ The Redux repository contains several example projects demonstrating various asp
 - [**Universal**](/introduction/examples#universal): [Source](https://github.com/reduxjs/redux/tree/master/examples/universal)
 - [**Real World**](/introduction/examples#real-world): [Source](https://github.com/reduxjs/redux/tree/master/examples/real-world) | [Sandbox](https://codesandbox.io/s/github/reduxjs/redux/tree/master/examples/real-world)
 
-## Learn Redux
+## Aprenda Redux
 
-We have a variety of resources available to help you learn Redux, no matter what your background or learning style is.
+Nós temos uma variedade de recursos para ajudar você a aprender Redux, não importa qual seja o seu background ou estilo de aprendizagem.
 
-### Just the Basics
+### Apenas o Básico
 
-If you're brand new to Redux and want to understand the basic concepts, see:
+Se você é novato no Redux e quer entender os conceitos básicos, veja:
 
-- The **[Motivation](./Motivation.md)** behind building Redux, the **[Core Concepts](./CoreConcepts.md)**, and the **[Three Principles](./ThreePrinciples.md)**.
-- The **[basic tutorial in the Redux docs](../basics/README.md)**
-- Redux creator Dan Abramov's **free ["Getting Started with Redux" video series](https://egghead.io/series/getting-started-with-redux)** on Egghead.io
-- Redux co-maintainer Mark Erikson's **["Redux Fundamentals" slideshow](http://blog.isquaredsoftware.com/2018/03/presentation-reactathon-redux-fundamentals/)** and **[list of suggested resources for learning Redux](http://blog.isquaredsoftware.com/2017/12/blogged-answers-learn-redux/)**
-- If you learn best by looking at code and playing with it, check out our list of **[Redux example applications](./Examples.md)**, available as separate projects in the Redux repo, and also as interactive online examples on CodeSandbox.
-- The **[Redux Tutorials](https://github.com/markerikson/react-redux-links/blob/master/redux-tutorials.md)** section of the **[React/Redux links list](https://github.com/markerikson/react-redux-links)**. Here's a top list of our recommended tutorials:
-  - Dave Ceddia's posts [What Does Redux Do? (and when should you use it?)](https://daveceddia.com/what-does-redux-do/) and [How Redux Works: A Counter-Example](https://daveceddia.com/how-does-redux-work/) are a great intro to the basics of Redux and how to use it with React, as is this post on [React and Redux: An Introduction](http://jakesidsmith.com/blog/post/2017-11-18-redux-and-react-an-introduction/).
-  - Valentino Gagliardi's post [React Redux Tutorial for Beginners: Learning Redux in 2018](https://www.valentinog.com/blog/react-redux-tutorial-beginners/) is an excellent extended introduction to many aspects of using Redux.
-  - The CSS Tricks article [Leveling Up with React: Redux](https://css-tricks.com/learning-react-redux/) covers the Redux basics well.
-  - This [DevGuides: Introduction to Redux](http://devguides.io/redux/) tutorial covers several aspects of Redux, including actions, reducers, usage with React, and middleware.
+- A **[Motivação](./Motivation.md)** por trás da construção do Redux, os **[Conceitos Principais](./CoreConcepts.md)**, e os **[Três Princípios](./ThreePrinciples.md)**.
+- O **[tutorial básico na documentação do Redux](../basics/README.md)**
+- **[Série de vídeos "Getting Started with Redux"](https://egghead.io/series/getting-started-with-redux)** grátis no Egghead.io do criador do Redux, Dan Abramov
+- **[O slideshow "Redux Fundamentals"](http://blog.isquaredsoftware.com/2018/03/presentation-reactathon-redux-fundamentals/)** e a **[lista de recursos sugeridos para aprender Redux](http://blog.isquaredsoftware.com/2017/12/blogged-answers-learn-redux/)** do co-mantenedor do Redux, Mark Erikson
+- Se você aprende melhor olhando o código e "brincando" com ele, cheque nossa lista de **[exemplos de aplicações Redux](./Examples.md)**, disponíveis como projetos separados no repositório do Redux, e também como exemplos online interativos no CodeSandbox.
+- A seção **[Tutoriais do Redux](https://github.com/markerikson/react-redux-links/blob/master/redux-tutorials.md)** da **[lista de links React/Redux](https://github.com/markerikson/react-redux-links)**. Aqui está uma lista dos nossos tutoriais recomendados:
+  - Os posts de Dave Ceddia: [What Does Redux Do? (and when should you use it?)](https://daveceddia.com/what-does-redux-do/) e [How Redux Works: A Counter-Example](https://daveceddia.com/how-does-redux-work/) são uma grande introdução para o básico de Redux e como usar ele com React, como este post [React and Redux: An Introduction](http://jakesidsmith.com/blog/post/2017-11-18-redux-and-react-an-introduction/).
+  - O post de Valentino Gagliardi: [React Redux Tutorial for Beginners: Learning Redux in 2018](https://www.valentinog.com/blog/react-redux-tutorial-beginners/) é uma excelente introdução mais extensa sobre muitos aspectos de uso do Redux.
+  - O artigo do CSS Tricks [Leveling Up with React: Redux](https://css-tricks.com/learning-react-redux/) abrange bem o básico de Redux.
+  - O tutorial [DevGuides: Introduction to Redux](http://devguides.io/redux/) tutorial covers several aspects of Redux, including actions, reducers, usage with React, and middleware.
 
-### Intermediate Concepts
+### Conceitos intermediários
 
-Once you've picked up the basics of working with actions, reducers, and the store, you may have questions about topics like working with asynchronous logic and AJAX requests, connecting a UI framework like React to your Redux store, and setting up an application to use Redux:
+Depois de ter aprendido as noções básicas de como trabalhar com actions, reducers e store, você pode ter perguntas sobre tópicos tais como trabalhar com lógica assíncrona e solicitações AJAX, conectar uma estrutura de interface do usuário como React ao seu armazenamento Redux e configurar um aplicativo para usar o Redux:
 
-- The **["Advanced" docs section](../advanced/README.md)** covers working with async logic, middleware, routing.
-- The Redux docs **["Learning Resources"](./LearningResources.md)** page points to recommended articles on a variety of Redux-related topics.
-- Sophie DeBenedetto's 8-part **[Building a Simple CRUD App with React + Redux](http://www.thegreatcodeadventure.com/building-a-simple-crud-app-with-react-redux-part-1/)** series shows how to put together a basic CRUD app from scratch.
+- A **["seção da documentação de conceitos Avançados](../advanced/README.md)** abrange detalhes sobre como trabalhar com lógica assíncrona, middleware e rotas.
+- A página de documentação do Redux **["Recursos de Aprendizagem"](./LearningResources.md)** aponta para artigos recomendados sobre uma variedade de tópicos relacionados ao Redux.
+- A série em 8 partes de Sophie DeBenedetto **Criando um aplicativo CRUD simples com React + Redux](http://www.thegreatcodeadventure.com/building-a-simple-crud-app-with-react-redux-part-1/)** mostra como montar um aplicativo CRUD básico a partir do zero.
 
 ### Real-World Usage
 
@@ -151,28 +141,28 @@ Going from a TodoMVC app to a real production application can be a big jump, but
 - Our community has created thousands of Redux-related libraries, addons, and tools. The **["Ecosystem" docs page](./Ecosystem.md)** lists our recommendations, and there's a complete listing available in the **[Redux addons catalog](https://github.com/markerikson/redux-ecosystem-links)**.
 - If you're looking to learn from actual application codebases, the addons catalog also has a list of **[purpose-built examples and real-world applications](https://github.com/markerikson/redux-ecosystem-links/blob/master/apps-and-examples.md)**.
 
-## Help and Discussion
+## Ajuda e Discussão
 
-The **[#redux channel](https://discord.gg/0ZcbPKXt5bZ6au5t)** of the **[Reactiflux Discord community](http://www.reactiflux.com)** is our official resource for all questions related to learning and using Redux. Reactiflux is a great place to hang out, ask questions, and learn - come join us!
+O **[canal #redux](https://discord.gg/0ZcbPKXt5bZ6au5t)** da **[comunidade Reactiflux no Discord](http://www.reactiflux.com)** é nosso recurso oficial para todas as questões relacionadas com aprender e usar o Redux. Reactiflux é um ótimo lugar para sair, fazer perguntas e aprender - venha se juntar a nós!
 
 You can also ask questions on [Stack Overflow](https://stackoverflow.com) using the **[#redux tag](https://stackoverflow.com/questions/tagged/redux)**.
 
-## Should You Use Redux?
+## Você deve usar o Redux?
 
-Redux is a valuable tool for organizing your state, but you should also consider whether it's appropriate for your situation. **Don't use Redux just because someone said you should - take some time to understand the potential benefits and tradeoffs of using it**.
+O Redux é uma ferramenta valiosa para organizar seu estado, mas você também deve considerar se é apropriado para sua situação. ** Não use o Redux só porque alguém disse que você deveria - tire um tempo para entender os potenciais benefícios e desvantagens de usá-lo **.
 
-Here are some suggestions on when it makes sense to use Redux:
+Aqui estão algumas sugestões sobre quando faz sentido usar o Redux:
 
-- You have reasonable amounts of data changing over time
-- You need a single source of truth for your state
-- You find that keeping all your state in a top-level component is no longer sufficient
+- Você tem quantidades razoáveis ​​de dados mudando ao longo do tempo
+- Você precisa de uma única fonte de verdade para o seu estado
+- Você acha que manter todo o seu estado em um componente de nível superior não é mais suficiente
 
-Yes, these guidelines are subjective and vague, but this is for good reason. The point at which you should integrate Redux into your application is different for every user and different for every application.
+Sim, essas diretrizes são subjetivas e vagas, mas isso é por um bom motivo. O momento em que você deve integrar o Redux em seu aplicativo é diferente para cada usuário e diferente para cada aplicativo.
 
-> **For more thoughts on how Redux is meant to be used, see:**<br>
+> **Para mais pensamentos sobre como o Redux deve ser usado, veja:**<br>
 >
-> - **[Redux FAQ: When should I use Redux?](../faq/General.md#when-should-i-use-redux)**
-> - **[You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)**<br>
-> - **[The Tao of Redux, Part 1 - Implementation and Intent](http://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-1/)**<br>
-> - **[The Tao of Redux, Part 2 - Practice and Philosophy](http://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-2/)**
+> - **[Redux FAQ: Quando eu devo usar o Redux?](../faq/General.md#when-should-i-use-redux)**
+> - **[Talvez você não precise do Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)**<br>
+> - **[O Tao do Redux, Parte 1 - Implementação e Intenção](http://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-1/)**<br>
+> - **[The Tao of Redux, Parte 2 - Prática e Filosofia](http://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-2/)**
 > - **[Redux FAQ](../FAQ.md)**
